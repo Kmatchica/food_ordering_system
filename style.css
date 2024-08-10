@@ -1,0 +1,615 @@
+/* Shared Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ff9900;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Container for menu and cart sections */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Menu Section */
+.menu-section {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    margin-bottom: 10px; /* Space between categories */
+}
+  
+.menu-container {
+    display: flex; /* Use Flexbox for horizontal layout */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px 0; /* Padding around the container */
+    gap: 10px; /* Space between items */
+}
+
+.menu-item {
+    flex: 0 0 auto; /* Do not grow or shrink, maintain natural width */
+    display: flex;
+    flex-direction: column; /* Arrange children vertically within each item */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 5px;
+    width: calc(33% - 40px);
+}
+.menu-item h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.quantity-input {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    margin-top: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.scrollable {
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Cart Section */
+.cart-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height:max-content;
+}
+
+.cart-item {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.order-summary {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.checkout-btn:hover {
+    background-color: #219150;
+}
+
+.price,
+.total {
+    font-size: 1.2em; /* Larger font size for emphasis */
+    color: #000000; /* Darker color for readability */
+    margin: 5px 0; /* Spacing between text */
+}
+
+.price::before,
+.total::before {
+    /*content: "₱";  Philippine Peso symbol */
+    font-weight: bold; /* Make the currency symbol bold */
+}
+
+.total {
+    font-weight: bold; /* Make the total amount bold */
+    color: #000000; /* Highlight the total amount with a red color */
+}
+
+
+/* WebKit-based browsers (Chrome, Safari) */
+.menu-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.menu-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out; /* Add transition for easing effect */
+}
+
+.menu-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox */
+.menu-container {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.menu-container * {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+
+/* Confirmation Page */
+.confirmation-section {
+    text-align: center;
+    
+}
+
+.confirmation-section h1 {
+    color: #000000;
+
+}
+
+.ticket {
+    color: #000000;
+    font-size: 70px;
+
+}
+
+.reminder {
+    color: #000000;
+    font-size: 40px;
+
+}
+
+.btn-confirmation {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-confirmation:hover {
+    background-color: #4e946b;
+}
+
+/* Login Page */
+.login-container {
+    background-color: #fff;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Center text within the button */
+}
+
+.login-container button:hover {
+    background-color: #219150;
+}
+
+.error {
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+/* Dashboard */
+.navbar {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h2 {
+    margin-top: 0;
+}
+
+.dashboard-card a {
+    display: block;
+    margin: 10px 0;
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.dashboard-card a:hover {
+    text-decoration: underline;
+}
+
+/* Tile layout styles for Pending Orders */
+/* Pending Orders Page */
+.pending-orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the tiles when there are few items */
+    gap: 20px; /* Space between tiles */
+    padding: 20px;
+}
+
+.order-tile {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(33% - 40px); /* Adjust the width of the tiles */
+    max-width: 300px; /* Set a maximum width for tiles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.order-tile h2 {
+    font-size: 1.5em;
+    margin: 0;
+    padding-bottom: 10px;
+    color: #27ae60;
+}
+
+.order-tile p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.order-tile .order-details {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.order-tile .btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.order-tile .btn:hover {
+    background-color: #219150;
+}
+.pending-order-buttons {
+    text-align: left;
+}
+
+.view-details-btn {
+    background-color: #27ae60;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.view-details-btn:hover {
+    background-color: #2cc46b;
+}
+
+.update-details-btn {
+    background-color: #248a9c;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.update-details-btn:hover {
+    background-color: #59a1ad;
+}
+
+.cancel-details-btn {
+    background-color: #bb3636;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.cancel-details-btn:hover {
+    background-color: #d45d5d;
+}
+
+.order-status {
+    text-transform: capitalize;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-tile {
+        flex: 1 1 calc(50% - 20px); /* 2 tiles per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .order-tile {
+        flex: 1 1 100%; /* 1 tile per row on very small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .order-tile {
+        flex: 0 1 calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .order-tile {
+        flex: 0 1 calc(100% - 20px); /* Adjust width for mobile screens */
+    }
+}
+
+/* Order details page */
+.order-details-container {
+    display: flex;
+    padding: 10px;
+    width: 90%;
+    max-width: 1200px;
+    gap: 10px;
+}
+
+.order-details {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 70%;
+    margin-right: 10px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.order-header .order-id {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.order-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    width: calc(50% - 50px);
+    box-sizing: border-box;
+}
+
+.order-item h3 {
+    margin: 0 0 10px;
+}
+
+.order-item p {
+    margin: 5px 0;
+}
+
+.payment-section {
+    margin-top: 20px;
+}
+
+.payment-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-section input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.payment-section button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.payment-section button:hover {
+    background-color: #219150;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.back-to-menu:hover {
+    background-color: #2980b9;
+}
+
+.payment-confirmation {
+    flex: 1; /* 70% of the parent's width */
+}
+
+.confirmation-details {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.confirmation-details h1 {
+    margin: 0 0 20px;
+    font-size: 1.5em;
+}
+
+.confirmation-details .detail {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.back-to-menu {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
